@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>דירוג שירות IT</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="profile-section">
+            <div class="robot-avatar">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Robot Head -->
+                    <rect x="25" y="30" width="50" height="45" rx="8" fill="#4a90e2"/>
+                    <!-- Antenna -->
+                    <line x1="50" y1="30" x2="50" y2="20" stroke="#4a90e2" stroke-width="3"/>
+                    <circle cx="50" cy="18" r="4" fill="#ff6b6b"/>
+                    <!-- Eyes -->
+                    <circle cx="40" cy="45" r="5" fill="#fff"/>
+                    <circle cx="60" cy="45" r="5" fill="#fff"/>
+                    <circle cx="40" cy="45" r="2" fill="#000"/>
+                    <circle cx="60" cy="45" r="2" fill="#000"/>
+                    <!-- Mouth -->
+                    <path d="M 35 60 Q 50 68 65 60" stroke="#fff" stroke-width="3" fill="none"/>
+                    <!-- Body -->
+                    <rect x="30" y="75" width="40" height="15" rx="4" fill="#4a90e2"/>
+                </svg>
+            </div>
+            <h2 class="name">ישראל ש.</h2>
+            <p class="title">מומחה IT</p>
+        </div>
+
+        <div class="survey-section">
+            <h1 class="main-title">אנא דרג את השירות שלי</h1>
+            
+            <div class="rating-buttons" id="ratingButtons">
+                <button class="rating-btn excellent" data-rating="excellent">
+                    <span class="emoji">😍</span>
+                    <span class="text">טוב מאוד</span>
+                </button>
+                <button class="rating-btn fair" data-rating="fair">
+                    <span class="emoji">😐</span>
+                    <span class="text">סביר</span>
+                </button>
+                <button class="rating-btn poor" data-rating="poor">
+                    <span class="emoji">😢</span>
+                    <span class="text">גרוע מאוד</span>
+                </button>
+            </div>
+
+            <div class="response-message" id="responseMessage"></div>
+        </div>
+
+        <div class="footer">
+            <p class="disclaimer">🤖 מופעל בטכנולוגיה מתקדמת של אכפתיות מלאכותית</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
