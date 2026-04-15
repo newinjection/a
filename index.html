@@ -3,57 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>דירוג שירות IT</title>
+    <title>דירוג שירות IT - ישראל ש.</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Animated Background Particles -->
+    <div class="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
     <div class="container">
-        <div class="profile-section">
-            <div class="robot-avatar">
-                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Robot Head -->
-                    <rect x="25" y="30" width="50" height="45" rx="8" fill="#4a90e2"/>
-                    <!-- Antenna -->
-                    <line x1="50" y1="30" x2="50" y2="20" stroke="#4a90e2" stroke-width="3"/>
-                    <circle cx="50" cy="18" r="4" fill="#ff6b6b"/>
-                    <!-- Eyes -->
-                    <circle cx="40" cy="45" r="5" fill="#fff"/>
-                    <circle cx="60" cy="45" r="5" fill="#fff"/>
-                    <circle cx="40" cy="45" r="2" fill="#000"/>
-                    <circle cx="60" cy="45" r="2" fill="#000"/>
-                    <!-- Mouth -->
-                    <path d="M 35 60 Q 50 68 65 60" stroke="#fff" stroke-width="3" fill="none"/>
-                    <!-- Body -->
-                    <rect x="30" y="75" width="40" height="15" rx="4" fill="#4a90e2"/>
-                </svg>
+        <!-- Header Card -->
+        <div class="profile-card">
+            <div class="profile-background"></div>
+            <div class="profile-content">
+                <div class="robot-avatar">
+                    <div class="avatar-glow"></div>
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Main Head -->
+                        <defs>
+                            <linearGradient id="robotGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+                            </linearGradient>
+                            <linearGradient id="eyeGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:#4FACFE;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#00F2FE;stop-opacity:1" />
+                            </linearGradient>
+                            <filter id="glow">
+                                <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                                <feMerge>
+                                    <feMergeNode in="coloredBlur"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                        </defs>
+                        
+                        <!-- Head -->
+                        <rect x="50" y="60" width="100" height="90" rx="15" fill="url(#robotGradient)" filter="url(#glow)"/>
+                        
+                        <!-- Antenna -->
+                        <line x1="100" y1="60" x2="100" y2="35" stroke="url(#robotGradient)" stroke-width="4" stroke-linecap="round"/>
+                        <circle cx="100" cy="30" r="8" fill="#ff6b6b" class="antenna-light">
+                            <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+                        </circle>
+                        
+                        <!-- Eyes -->
+                        <g class="eyes">
+                            <circle cx="75" cy="90" r="12" fill="url(#eyeGradient)" class="eye-left"/>
+                            <circle cx="125" cy="90" r="12" fill="url(#eyeGradient)" class="eye-right"/>
+                            <circle cx="75" cy="90" r="5" fill="#fff" class="eye-shine-left"/>
+                            <circle cx="125" cy="90" r="5" fill="#fff" class="eye-shine-right"/>
+                        </g>
+                        
+                        <!-- Smile -->
+                        <path d="M 70 115 Q 100 130 130 115" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" class="smile"/>
+                        
+                        <!-- Decorative elements -->
+                        <rect x="55" y="110" width="8" height="3" rx="1.5" fill="#fff" opacity="0.3"/>
+                        <rect x="137" y="110" width="8" height="3" rx="1.5" fill="#fff" opacity="0.3"/>
+                        
+                        <!-- Body -->
+                        <rect x="60" y="150" width="80" height="35" rx="10" fill="url(#robotGradient)"/>
+                        
+                        <!-- Body lights -->
+                        <circle cx="80" cy="167" r="4" fill="#4FACFE" opacity="0.8">
+                            <animate attributeName="opacity" values="0.8;0.3;0.8" dur="1.5s" repeatCount="indefinite"/>
+                        </circle>
+                        <circle cx="100" cy="167" r="4" fill="#4FACFE" opacity="0.8">
+                            <animate attributeName="opacity" values="0.8;0.3;0.8" dur="1.5s" begin="0.5s" repeatCount="indefinite"/>
+                        </circle>
+                        <circle cx="120" cy="167" r="4" fill="#4FACFE" opacity="0.8">
+                            <animate attributeName="opacity" values="0.8;0.3;0.8" dur="1.5s" begin="1s" repeatCount="indefinite"/>
+                        </circle>
+                    </svg>
+                </div>
+                <div class="profile-info">
+                    <h2 class="name">ישראל ש.</h2>
+                    <p class="title">
+                        <span class="icon">💼</span>
+                        מומחה IT & תמיכה טכנית
+                    </p>
+                    <div class="status-badge">
+                        <span class="status-dot"></span>
+                        זמין לשירותך
+                    </div>
+                </div>
             </div>
-            <h2 class="name">ישראל ש.</h2>
-            <p class="title">מומחה IT</p>
         </div>
 
-        <div class="survey-section">
-            <h1 class="main-title">אנא דרג את השירות שלי</h1>
-            
-            <div class="rating-buttons" id="ratingButtons">
+        <!-- Survey Card -->
+        <div class="survey-card">
+            <div class="survey-header">
+                <h1 class="main-title">איך הייתה החוויה שלך?</h1>
+                <p class="subtitle">המשוב שלך חשוב לנו ומסייע לנו להשתפר</p>
+            </div>
+
+            <div class="rating-container" id="ratingButtons">
                 <button class="rating-btn excellent" data-rating="excellent">
-                    <span class="emoji">😍</span>
-                    <span class="text">טוב מאוד</span>
+                    <div class="btn-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                            <line x1="9" y1="9" x2="9.01" y2="9"/>
+                            <line x1="15" y1="9" x2="15.01" y2="9"/>
+                        </svg>
+                    </div>
+                    <div class="btn-content">
+                        <span class="btn-title">מעולה</span>
+                        <span class="btn-subtitle">השירות היה נהדר!</span>
+                    </div>
+                    <div class="btn-emoji">😍</div>
                 </button>
+
                 <button class="rating-btn fair" data-rating="fair">
-                    <span class="emoji">😐</span>
-                    <span class="text">סביר</span>
+                    <div class="btn-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="8" y1="15" x2="16" y2="15"/>
+                            <line x1="9" y1="9" x2="9.01" y2="9"/>
+                            <line x1="15" y1="9" x2="15.01" y2="9"/>
+                        </svg>
+                    </div>
+                    <div class="btn-content">
+                        <span class="btn-title">בסדר</span>
+                        <span class="btn-subtitle">היה סביר, אפשר יותר</span>
+                    </div>
+                    <div class="btn-emoji">😐</div>
                 </button>
+
                 <button class="rating-btn poor" data-rating="poor">
-                    <span class="emoji">😢</span>
-                    <span class="text">גרוע מאוד</span>
+                    <div class="btn-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M16 16s-1.5-2-4-2-4 2-4 2"/>
+                            <line x1="9" y1="9" x2="9.01" y2="9"/>
+                            <line x1="15" y1="9" x2="15.01" y2="9"/>
+                        </svg>
+                    </div>
+                    <div class="btn-content">
+                        <span class="btn-title">לא טוב</span>
+                        <span class="btn-subtitle">צריך שיפור משמעותי</span>
+                    </div>
+                    <div class="btn-emoji">😢</div>
                 </button>
             </div>
 
             <div class="response-message" id="responseMessage"></div>
         </div>
 
+        <!-- Footer -->
         <div class="footer">
-            <p class="disclaimer">🤖 מופעל בטכנולוגיה מתקדמת של אכפתיות מלאכותית</p>
+            <div class="footer-content">
+                <div class="tech-badge">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+                    </svg>
+                </div>
+                <p class="footer-text">מופעל בטכנולוגיה מתקדמת של אכפתיות מלאכותית™</p>
+                <p class="footer-subtext">AI-Powered Feedback System v2.0</p>
+            </div>
         </div>
     </div>
 
