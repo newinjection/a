@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    direction: rtl;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 100%;
+    padding: 40px 30px;
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.profile-section {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.robot-avatar {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+    animation: float 3s ease-in-out infinite;
+    filter: drop-shadow(0 5px 15px rgba(74, 144, 226, 0.4));
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.robot-avatar svg {
+    width: 100%;
+    height: 100%;
+}
+
+.name {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.title {
+    font-size: 16px;
+    color: #666;
+    font-weight: 500;
+}
+
+.survey-section {
+    margin-bottom: 30px;
+}
+
+.main-title {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.rating-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.rating-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    border-radius: 15px;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.rating-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.rating-btn:active {
+    transform: translateY(-1px);
+}
+
+.rating-btn.excellent {
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+}
+
+.rating-btn.fair {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.rating-btn.poor {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+.emoji {
+    font-size: 28px;
+}
+
+.text {
+    font-size: 20px;
+}
+
+.response-message {
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 500;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.4s ease;
+}
+
+.response-message.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.response-message.excellent-msg {
+    background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%);
+    color: #2d5016;
+}
+
+.response-message.fair-msg {
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    color: #7c3a00;
+}
+
+.response-message.poor-msg {
+    background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%);
+    color: #fff;
+}
+
+.rating-buttons.disabled .rating-btn {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #f0f0f0;
+}
+
+.disclaimer {
+    font-size: 13px;
+    color: #999;
+    font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 30px 20px;
+    }
+
+    .main-title {
+        font-size: 20px;
+    }
+
+    .name {
+        font-size: 24px;
+    }
+
+    .rating-btn {
+        padding: 18px;
+        font-size: 16px;
+    }
+
+    .emoji {
+        font-size: 24px;
+    }
+
+    .text {
+        font-size: 18px;
+    }
+
+    .response-message {
+        font-size: 14px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        padding: 25px 15px;
+    }
+
+    .robot-avatar {
+        width: 80px;
+        height: 80px;
+    }
+
+    .main-title {
+        font-size: 18px;
+    }
+
+    .rating-btn {
+        padding: 15px;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .text {
+        font-size: 16px;
+    }
+}
